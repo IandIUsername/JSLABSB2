@@ -1,4 +1,6 @@
 <h1> The Show Page For An Article<h1>
   
-  <%= "this is the TITLE: #{@article.title}, and this the BODY: #{@article.body}" %>
-  </br></br> <%= link_to "<< Back To Articles List", articles_path %>
+  <%= "This Is The TITLE: #{@article.title} And This The BODY: #{@article.body}" %>
+ </br> <%= link_to "<< Back To Articles List", articles_path %>
+  <%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: "Seriously?" } %>
+  <%= link_to "Edit", edit_article_path(@article) %>
