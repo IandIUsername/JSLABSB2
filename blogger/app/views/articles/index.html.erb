@@ -7,6 +7,7 @@
   id: "article_#{article.id}" %>
     </li>
     <% end %>
+    <%= link_to "all tags", tags_path %>
    <li><%= link_to "Create a New Article", new_article_path, class: "new_article" %>
     </li>
   </ul>

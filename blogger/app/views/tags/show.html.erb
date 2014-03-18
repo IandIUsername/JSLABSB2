@@ -1,0 +1,15 @@
+<h1>This is the tag show page</h1></br>
+<%= "and this is the tags name: #{@tag.name}" %></br>
+<%= "and id: #{@tag.id} " %></br>
+<%= "and to delete #{@tag.name}" %>
+<%= link_to " #{@tag.name} ", tags_path(@tag), method: :delete %>
+<%= "the articles associated with this tag are:" %></br>
+<% @tag.articles.each do |article| %>
+<ul></br>
+<li>
+  <%= " article: #{ article.title}" %>
+ 
+</li>
+  <% end %></br>
+
+<%= link_to "Tags Index", tags_path %>

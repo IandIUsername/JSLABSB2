@@ -1,0 +1,16 @@
+<h4>This is the tags index page</h4>
+<%= "There are #{@tags.count} tags in total." %></br>
+<%= "These are all the tags:" %>
+<% @tags.each do |tag| %>
+
+<ol>
+<li>
+ 
+<%= link_to "show page for #{tag.name} tag", tag_path(tag) %>
+  <%= link_to "delete: #{tag.name} ", tag_path, method: :delete %>
+  </li>
+</ol>
+
+<% end %></br>
+
+<%= link_to "Articles index", articles_path %>
